@@ -115,6 +115,10 @@ class PokedexViewController: UITableViewController {
     }
   }
   
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 100.0
+  }
+  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // se for a ultima celula, carrega o load
     if indexPath.row == resultCount {
