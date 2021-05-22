@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        let viewController = ViewController()
-        window?.rootViewController = viewController
+        let rootViewController = TabBarViewController()
+        window?.rootViewController = rootViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
