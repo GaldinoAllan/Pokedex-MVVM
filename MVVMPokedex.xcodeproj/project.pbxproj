@@ -29,6 +29,7 @@
 		0FC4DE5526488EEF00AFE8F5 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4DE5426488EEF00AFE8F5 /* PokedexViewController.swift */; };
 		9D43A9EF2659AA720082D771 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43A9EE2659AA720082D771 /* SearchView.swift */; };
 		9D43A9F52659C8200082D771 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43A9F42659C8200082D771 /* CodeView.swift */; };
+		9DD900D5265B2692008C2F7C /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD900D4265B2692008C2F7C /* GridBoxView.swift */; };
 		E1C0D3573A071F08224E7BF9 /* Pods_MVVMPokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75970FFD7ED9B1542C092DD /* Pods_MVVMPokedex.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		7277036CC8E897A6D53239D6 /* Pods-MVVMPokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPokedex.release.xcconfig"; path = "Target Support Files/Pods-MVVMPokedex/Pods-MVVMPokedex.release.xcconfig"; sourceTree = "<group>"; };
 		9D43A9EE2659AA720082D771 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9D43A9F42659C8200082D771 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		9DD900D4265B2692008C2F7C /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
 		A75970FFD7ED9B1542C092DD /* Pods_MVVMPokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 		0F5BC86B2648663A004E7D6F /* MVVMPokedex */ = {
 			isa = PBXGroup;
 			children = (
+				9DD900D3265B261E008C2F7C /* views */,
 				9D43A9F32659C8120082D771 /* protocols */,
 				9D43A9EA2659A9EF0082D771 /* Search */,
 				0F25A9132655D79400A6418A /* ViewControllers */,
@@ -249,6 +252,14 @@
 				9D43A9F42659C8200082D771 /* CodeView.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		9DD900D3265B261E008C2F7C /* views */ = {
+			isa = PBXGroup;
+			children = (
+				9DD900D4265B2692008C2F7C /* GridBoxView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +387,7 @@
 				0FC4DE4926486DA400AFE8F5 /* ParsePokedex.swift in Sources */,
 				0FC4DE4426486CB800AFE8F5 /* PokemonModel.swift in Sources */,
 				0F5BC86F2648663A004E7D6F /* SceneDelegate.swift in Sources */,
+				9DD900D5265B2692008C2F7C /* GridBoxView.swift in Sources */,
 				0FC4DE5526488EEF00AFE8F5 /* PokedexViewController.swift in Sources */,
 				0F25A9002655C9B000A6418A /* TabBarViewController.swift in Sources */,
 				0F25A9042655CBA500A6418A /* QrCodeViewController.swift in Sources */,
