@@ -7,5 +7,6 @@ target 'MVVMPokedex' do
 
   # Pods for MVVMPokedex
   pod 'Alamofire', '~> 4.0'
+  pod 'SnapKit', '~> 5.0.1'
 
 end
