@@ -8,5 +8,9 @@
 import Foundation
 
 class PokeAPI {
-    static var url = "http://pokeapi.co/api/v2/pokemon/"
+    static let url = "https://pokeapi.co/api/v2/pokemon?limit=151"
+
+    static func getPokemonImageUrl(for id: Int) -> String {
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png"
+    }
 }

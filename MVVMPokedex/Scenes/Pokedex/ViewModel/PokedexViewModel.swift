@@ -17,18 +17,15 @@ class PokedexViewModel {
     // MARK: - Properties
 
     private let pokedexService: PokedexService
-    private let pokemonService: PokemonService
     private(set) var pokedex = Pokedex(count: 0, next: "", previous: "", results: [PokemonName]())
-    private(set) var pokemonList = [Pokemon]()
+//    private(set) var pokemonList = [Pokemon]()
 
     weak var delegate: PokedexViewModelDelegate?
 
     // MARK: - Initializer
 
-    init(pokedexService: PokedexService = PokedexService(),
-         pokemonService: PokemonService = PokemonService()) {
+    init(pokedexService: PokedexService = PokedexService()) {
         self.pokedexService = pokedexService
-        self.pokemonService = pokemonService
     }
 
     // MARK: - Contents
@@ -48,24 +45,20 @@ class PokedexViewModel {
         }
     }
 
-    func loadPokemon(with url: String) -> (name: String, imageUrl: String)? {
-        var pokemonTuple: (name: String, imageUrl: String)?
+    func loadPokemon(at indexPath: IndexPath) -> Pokemon? {
+        let url = pokedex.results[indexPath.row].url
+        var pokemonData: Pokemon?
 
-        pokemonService.loadPokemon(with: url) { [weak self] (result) in
-            guard let self = self else { return }
-
-            switch result {
-            case .success(let pokemon):
-                pokemonTuple?.name = pokemon.name
-                pokemonTuple?.imageUrl = pokemon.imageUrl ?? ""
-                self.delegate?.pokedexDidLoad()
-            case .failure(let error):
-                self.delegate?.fetchFailed(withError: (title: "Error loading pokemon",
-                                                       message: error.localizedDescription))
-            }
-        }
-
-        return pokemonTuple
+        pokedexService.loadPokemon(with: url) { [weak self] (result) in
+             switch result {
+             case .success(let pokemon):
+                 pokemonData = pokemon
+             case .failure(let error):
+                 self?.delegate?.fetchFailed(withError: (title: "Error loading pokemon",
+                                                         message: error.localizedDescription))
+             }
+         }
+        return pokemonData
     }
     
     func selectPokemonFromList(at indexPath: IndexPath) -> (title: String, message: String) {

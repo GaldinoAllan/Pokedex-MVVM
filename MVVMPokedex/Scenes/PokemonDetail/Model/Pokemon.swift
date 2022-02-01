@@ -5,13 +5,13 @@
 //  Created by allan.galdino on 09/05/21.
 //
 
-struct Pokemon: Decodable, Equatable {
-    let id: Int
-    let name: String
-    private let sprites: Sprite
+struct Pokemon: Codable, Equatable {
+    var id: Int
+    var name: String
+    var sprites: Sprite
 
-    struct Sprite: Decodable, Equatable {
-        let frontDefault: String?
+    struct Sprite: Codable, Equatable {
+        var frontDefault: String?
 
         enum CodingKeys: String, CodingKey {
             case frontDefault = "front_default"
@@ -22,5 +22,3 @@ struct Pokemon: Decodable, Equatable {
 extension Pokemon {
     var imageUrl: String? { sprites.frontDefault }
 }
-
-
