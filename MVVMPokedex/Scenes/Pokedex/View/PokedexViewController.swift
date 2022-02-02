@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PokedexViewController: UINavigationController {
+class PokedexViewController: UIViewController {
 
     // MARK: - Views
 
@@ -125,21 +125,16 @@ extension PokedexViewController: UITableViewDataSource, UITableViewDelegate {
                     return UITableViewCell()
                 }
 
-        cell.pokemonName = viewModel.pokedex.results[indexPath.row].name
-        cell.imageUrl = PokeAPI.getPokemonImageUrl(for: indexPath.row + 1)
-
-        guard let pokemon = viewModel.loadPokemon(at: indexPath) else { return cell }
-        cell.pokemonName = pokemon.name
+        cell.pokemonName = viewModel.pokemonList[indexPath.row].name
+        cell.imageUrl = viewModel.pokemonList[indexPath.row].imageUrl
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-//        let alertInfo = viewModel.selectPokemonFromList(at: indexPath)
-//        showAlert(with: alertInfo)
         navigationController?.pushViewController(
             PokemonViewController(pokemonName: viewModel.pokedex.results[indexPath.row].name),
             animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

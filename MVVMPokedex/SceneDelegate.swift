@@ -16,9 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = scene as? UIWindowScene else { return }
-
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = PokedexViewController()
+
+        let rootViewController = UINavigationController()
+        let mainViewController = PokedexViewController()
+        rootViewController.viewControllers = [mainViewController]
+        window.rootViewController = rootViewController
         self.window = window
         window.makeKeyAndVisible()
     }

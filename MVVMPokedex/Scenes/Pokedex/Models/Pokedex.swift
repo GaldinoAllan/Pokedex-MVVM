@@ -10,9 +10,9 @@ struct Pokedex: Codable, Equatable {
     let next: String?
     let previous: String?
     var results = [PokemonName]()
-}
 
-struct PokemonName: Codable, Equatable {
-    let name: String
-    let url: String
+    struct PokemonName: Codable, Equatable {
+        let name: String
+        let url: String
+    }
 }

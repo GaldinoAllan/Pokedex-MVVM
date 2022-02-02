@@ -20,6 +20,7 @@
 		0F5BC86F2648663A004E7D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BC86E2648663A004E7D6F /* SceneDelegate.swift */; };
 		0F5BC8762648663E004E7D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5BC8752648663E004E7D6F /* Assets.xcassets */; };
 		0F5BC8792648663E004E7D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5BC8772648663E004E7D6F /* LaunchScreen.storyboard */; };
+		0F6EF90527AAE912000C8B00 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF90427AAE912000C8B00 /* Species.swift */; };
 		0F96076827A81F6300260AA5 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96076727A81F6300260AA5 /* NetworkSession.swift */; };
 		0F96076B27A8222400260AA5 /* URLSession+NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96076A27A8222400260AA5 /* URLSession+NetworkSession.swift */; };
 		0F96076E27A829AD00260AA5 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96076D27A829AD00260AA5 /* NetworkErrors.swift */; };
@@ -49,6 +50,7 @@
 		0F5BC8752648663E004E7D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F5BC8782648663E004E7D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F5BC87A2648663E004E7D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F6EF90427AAE912000C8B00 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		0F96076727A81F6300260AA5 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		0F96076A27A8222400260AA5 /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
 		0F96076D27A829AD00260AA5 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC4DE4326486CB800AFE8F5 /* Pokemon.swift */,
+				0F6EF90427AAE912000C8B00 /* Species.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				0F25A9062655CCBD00A6418A /* OrderViewController.swift in Sources */,
 				0F25A9152655D7D400A6418A /* TabNavigationMenu.swift in Sources */,
 				0FC4DE4226486AF900AFE8F5 /* Pokedex.swift in Sources */,
+				0F6EF90527AAE912000C8B00 /* Species.swift in Sources */,
 				0FC4DE4426486CB800AFE8F5 /* Pokemon.swift in Sources */,
 				0F5BC86F2648663A004E7D6F /* SceneDelegate.swift in Sources */,
 				0FC4DE5526488EEF00AFE8F5 /* PokedexViewController.swift in Sources */,

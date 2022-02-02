@@ -63,8 +63,13 @@ class PokedexCell: UITableViewCell {
     // MARK: - Set Up methods
 
     private func setUp() {
+        setUpView()
         setUpSubViews()
         setUpConstraints()
+    }
+
+    private func setUpView() {
+        backgroundColor = .green
     }
 
     private func setUpSubViews() {
