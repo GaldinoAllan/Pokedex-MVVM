@@ -23,11 +23,12 @@ class PokedexViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 120
+        tableView.alwaysBounceVertical = true
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 140
         tableView.register(PokedexCell.self,
                            forCellReuseIdentifier: String(describing: PokedexCell.self))
         tableView.backgroundView = activity
-        tableView.tableFooterView = UIView()
         return tableView
     }()
 
@@ -58,7 +59,7 @@ class PokedexViewController: UIViewController {
     // MARK: - Set Up methods
 
     private func setUp() {
-        title = "Pokedex"
+        setUpNavigationBar()
         setUpSubView()
         setUpConstraints()
         setUpDelegates()
@@ -79,6 +80,15 @@ class PokedexViewController: UIViewController {
 
     private func setUpDelegates() {
         viewModel.delegate = self
+    }
+
+    private func setUpNavigationBar() {
+        title = "Pokedex"
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = .red
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 
     // MARK: - Contents
