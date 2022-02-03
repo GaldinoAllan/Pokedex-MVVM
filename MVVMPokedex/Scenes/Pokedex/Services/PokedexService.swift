@@ -9,10 +9,10 @@ import Foundation
 
 protocol PokedexServiceProtocol {
 
-    func loadPokedex(completionHandler: @escaping (Result<Pokedex, NetworkErros>) -> Void)
+    func loadPokedex(completionHandler: @escaping (Result<Pokedex, NetworkErrors>) -> Void)
 
     func loadPokemon(with pokemonUrl: String,
-                     completionHandler: @escaping (Result<Pokemon, NetworkErros>) -> Void)
+                     completionHandler: @escaping (Result<Pokemon, NetworkErrors>) -> Void)
 }
 
 class PokedexService: PokedexServiceProtocol {
@@ -21,11 +21,11 @@ class PokedexService: PokedexServiceProtocol {
     private let session: NetworkSession
 
     init(apiUrl: String = PokeAPI.url, session: NetworkSession = URLSession.shared) {
-        self.pokeApiURL = apiUrl
         self.session = session
+        self.pokeApiURL = apiUrl
     }
 
-    func loadPokedex(completionHandler: @escaping (Result<Pokedex, NetworkErros>) -> Void) {
+    func loadPokedex(completionHandler: @escaping (Result<Pokedex, NetworkErrors>) -> Void) {
         guard let apiUrl = URL(string: pokeApiURL) else {
             completionHandler(.failure(.invalidUrl))
             return
@@ -56,7 +56,7 @@ class PokedexService: PokedexServiceProtocol {
     }
 
     func loadPokemon(with pokemonUrl: String,
-                     completionHandler: @escaping (Result<Pokemon, NetworkErros>) -> Void) {
+                     completionHandler: @escaping (Result<Pokemon, NetworkErrors>) -> Void) {
         guard let apiUrl = URL(string: pokemonUrl) else {
             completionHandler(.failure(.invalidUrl))
             return

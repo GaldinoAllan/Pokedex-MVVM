@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkErros: Error {
+enum NetworkErrors: Error {
     case invalidUrl
     case emptyResponse
     case serverError(message: String)
@@ -32,29 +32,3 @@ enum NetworkErros: Error {
         }
     }
 }
-
-//struct ServerError {
-//    let msgError: String
-//    let statusCode: Int
-//}
-//
-//enum PokedexResponse {
-//    case success(model: PokedexModel)
-//    case serverError(description: ServerError)
-//    case timeOut(description: ServerError)
-//    case noConnection(description: ServerError)
-//}
-//
-//enum PokemonResponse {
-//    case success(model: PokemonModel)
-//    case serverError(description: ServerError)
-//    case timeOut(description: ServerError)
-//    case noConnection(description: ServerError)
-//}
-//
-//enum ImageResponse {
-//    case success(model: Data)
-//    case serverError(description: ServerError)
-//    case timeOut(description: ServerError)
-//    case noConnection(description: ServerError)
-//}
