@@ -15,7 +15,7 @@ class PokemonViewController: UIViewController {
         self.pokemonName = pokemonName
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .red
-        title = pokemonName
+        title = pokemonName.capitalized
     }
 
     @available(*, unavailable)
